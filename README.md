@@ -18,9 +18,21 @@ This project sample a basic selection of Laravel features through simple task li
 ## Quick Installation
 First, clone repo and install all dependencies.
 ```sh
-$ git clone https://github.com/haryasa/laravel-sample-basic-task-list.git basic-task-list
-$ cd basic-task-list
+$ sudo yum install git
+$ sudo yum install php71
+$ sudo yum install php71-mbstring
+$ sudo yum install php71-pdo
+$ sudo yum install php71-mysqlnd
+$ git clone https://github.com/nathawat/task-list.git 
+$ sudo curl -s https://getcomposer.org/installer | php
+$ sudo mv composer.phar /usr/local/bin/composer
+$ cd task-list
+$ cp .env.example .env
+$ nano .env
 $ composer install
+$ php artisan key:generate
+$ php artisan migrate
+$ php artisan serv --host=0.0.0.0
 ```
 After that, setting up database config in `.env` file and then run migrate command.
 ```sh
